@@ -5,10 +5,10 @@ Um sistema com objetivo de auxiliar as pessoas que não possuem conhecimentos au
 ## Alunos integrantes da equipe:
 
 * Érick Fernando dos Santos Vieira;
-* Igor Lucas Assunção Ribas
-* Marcelo Americano Oliveira
-* Mathaüs Tertulliano Souza Santos
-* Pedro Henrique Oliveira Siqueira
+* Igor Lucas Assunção Ribas;
+* Marcelo Americano Oliveira;
+* Mathaüs Tertulliano Souza Santos;
+* Pedro Henrique Oliveira Siqueira.
 
 ## Professores responsáveis:
 

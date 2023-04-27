@@ -10,6 +10,17 @@ Um sistema com objetivo de auxiliar as pessoas que não possuem conhecimentos au
 * Mathaüs Tertulliano Souza Santos;
 * Pedro Henrique Oliveira Siqueira.
 
+## Comentários sobre o projeto
+
+### Sprint 1 (15 pontos)
+Documentação
+- Folha de detalhamento do problema: ❌
+- Persona(s) ✔️
+- Histórias de usuários prioritárias (pelo menos 3) ✔️
+- Wireframes apresentados no vídeo. ❌
+
+Apresentação
+Boa apresentação no geral, com alguma confusão no momento de apresentar o problema ("dor") com o objetivo ("solução ou ferramenta").
 ## Professores responsáveis:
 
 * Gabriel Barbosa da Fonseca (Responsável pelo grupo);

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="icon" href="/codigo/img/logo.png" type="image/png" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>AutoGuide</title>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark"
+        style="background-color: #1d1d1d; width: 100vw"
+      >
+        <a class="navbar-brand" href="#">
+          <img src="/codigo/img/logo.png" alt="Logo" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#conteudoNavbarSuportado"
+          aria-controls="conteudoNavbarSuportado"
+          aria-expanded="false"
+          aria-label="Alterna navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <nav class="navbar bg-body-tertiary">
+          <div class="d-flex" role="search">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Pesquisar"
+              aria-label="Pesquisar"
+              style="font-size: 25px"
+            />
+            <button class="btn my-2 my-sm-0" type="submit">
+              <i
+                class="fas fa-search"
+                style="color: #ff3c00; font-size: 22px"
+              ></i>
+            </button>
+          </div>
+        </nav>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i
+                class="fas fa-user-circle"
+                style="color: #ff3c00; font-size: 25px"
+              ></i>
+              <!-- Ícone de perfil -->
+              <span class="logincadastro"
+                ><a
+                  href="/codigo/pages/login/login.html"
+                  style="text-decoration: none; color: #ff3c00; font-size: 25px"
+                  >ENTRAR/CADASTRAR</a
+                ></span
+              >
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ITENS DA ESQUERDA DA PAGINA -->
+
+    <div class="row">
+      <div class="col-md-2">
+        <div
+          class="card"
+          style="width: 175px; height: 620px; background-color: #ff3c00"
+        >
+          <ul
+            class="list-group list-group-flush"
+            style="color: rgb(255, 255, 255); font-size: 20px"
+          >
+            <li
+              class="list-group-item card-header"
+              style="background-color: #ff3c00"
+            >
+              Minha conta
+            </li>
+            <li
+              class="list-group-item card-header"
+              style="background-color: #ff3c00"
+            >
+              Meus veículos
+            </li>
+            <li
+              class="list-group-item card-header"
+              style="background-color: #ff3c00"
+            >
+              Novidades
+            </li>
+            <li
+              class="list-group-item card-header"
+              style="background-color: #ff3c00"
+            >
+              Avaliações
+            </li>
+            <li
+              class="list-group-item card-header"
+              style="background-color: #ff3c00"
+            >
+              Protocolo
+            </li>
+            <li
+              class="list-group-item card-header"
+              style="background-color: #ff3c00"
+            >
+              <a
+                href="/codigo/pages/contato/contato.html"
+                style="text-decoration: none; color: white"
+                >Contate-nos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="form-container text-center">
+          <h2>CALCULAR PRÓXIMA REVISÃO</h2>
+          <form>
+            <!-- Formulário de revisão aqui -->
+            <label for="last-revision-date">Data da última revisão:</label>
+            <input
+              type="date"
+              id="last-revision-date"
+              name="last-revision-date"
+            /><br />
+            <label for="last-revision-mileage"
+              >Quilometragem da última revisão:</label
+            >
+            <input
+              type="number"
+              id="last-revision-mileage"
+              name="last-revision-mileage"
+            /><br />
+            <label for="current-mileage">Quilometragem atual do veículo:</label>
+            <input
+              type="number"
+              id="current-mileage"
+              name="current-mileage"
+            /><br />
+            <button
+              type="button"
+              onclick="calcularProximaRevisao()"
+              style="background-color: #1d1d1d"
+            >
+              Enviar
+            </button>
+          </form>
+          <p id="proxima-revisao" style="color: #ff3c00"></p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-custom text-white">
+      <div class="container p-4">
+        <div class="row">
+          <div
+            class="col-lg-4 col-md-12 text-center;"
+            style="text-align: center; padding-right: 10px; margin-top: 50px"
+          >
+            <!-- Informações centralizadas -->
+            <p>
+              <a
+                class="btn btn-outline-light btn-floating m-1"
+                href="#!"
+                role="button"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+
+              <!-- Twitter -->
+              <a
+                class="btn btn-outline-light btn-floating m-1"
+                href="#!"
+                role="button"
+                ><i class="fab fa-twitter"></i
+              ></a>
+
+              <!-- Google -->
+              <a
+                class="btn btn-outline-light btn-floating m-1"
+                href="#!"
+                role="button"
+                ><i class="fab fa-google"></i
+              ></a>
+
+              <!-- Instagram -->
+              <a
+                class="btn btn-outline-light btn-floating m-1"
+                href="#!"
+                role="button"
+                ><i class="fab fa-instagram"></i
+              ></a>
+
+              <!-- Linkedin -->
+              <a
+                class="btn btn-outline-light btn-floating m-1"
+                href="#!"
+                role="button"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </p>
+          </div>
+
+          <div class="col-lg-4 col-md-12">
+            <!-- Informações alinhadas à esquerda -->
+            <i
+              class="fab fa-github"
+              style="font-size: 30px; padding-left: 990px; padding-bottom: 5px"
+            ></i>
+            <p>
+              <img
+                src="/codigo/img/qrcode.png"
+                alt="qrcode"
+                style="padding-left: 950px"
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+  <script src="script.js"></script>
+</html>

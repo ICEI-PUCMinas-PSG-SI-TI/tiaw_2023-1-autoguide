@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="/codigo/img/logo.png" type="image/png" />
+    <link href="login.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/1ab94d0eba.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <img class="logo_login" src="/codigo/img/logoP.png" alt="" />
+      <h2>Login</h2>
+      <form action="">
+        <div class="input-field">
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Insira seu email"
+          />
+          <div class="underline"></div>
+        </div>
+        <div class="input-field">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Insira sua senha"
+          />
+          <div class="underline"></div>
+        </div>
+        <p class="login-prompt">
+          Não possui conta?
+          <a href="/codigo/pages/register/register.html">Cadastre-se</a>
+        </p>
+        <input type="submit" value="Continue" />
+      </form>
+
+      <div class="footer">
+        <span>Ou entre com:</span>
+        <div class="social-fields">
+          <div class="social-field google">
+            <a href="#">
+              <i class="fa-brands fa-google"></i>
+              Sign in com Google
+            </a>
+          </div>
+          <div class="social-field facebook">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+              Sign in com Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

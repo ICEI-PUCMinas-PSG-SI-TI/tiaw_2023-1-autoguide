@@ -36,6 +36,8 @@ form {
 
 
 /* ITENS A ESQUERDA*/
+
+
 .sidebar {
   position: fixed;
   margin-top: 80px;
@@ -45,10 +47,13 @@ form {
   width: 150px;
   background-color: #ff3c00;
   padding: 20px;
+  list-style: none;
+  text-decoration: none;
 }
 
 h4 {
   padding-top: 30px;
+  color: black;
 }
 
 @media (max-width: 900px) {
@@ -246,6 +251,7 @@ footer {
 .socials a:hover i {
   color: #ff3c00;
 }
+
 /* FIM RODAPE */
 
 
@@ -255,6 +261,8 @@ footer {
 
 /*CABECALHO*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+
+
 
 * {
   margin: 0;

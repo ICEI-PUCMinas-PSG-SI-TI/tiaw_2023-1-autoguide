@@ -9,57 +9,130 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Contato - AutoGuide</title>
     <link rel="icon" href="/codigo/img/logo.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <div class="container">
-      <div class="content">
-        <div class="left-side">
-          <div>
-            <img src="/codigo/img/logoP.png" />
-          </div>
-          <div class="address details">
-            <i class="fas fa-map-marker-alt"></i>
-            <div class="topic">Endereço</div>
-            <div class="text-one">Rua Walter Ianni, 255</div>
-            <div class="text-two">Bairro São Gabriel</div>
-          </div>
-          <div class="phone details">
-            <i class="fas fa-phone-alt"></i>
-            <div class="topic">Telefone</div>
-            <div class="text-one">(31) 3319-4444</div>
-          </div>
-          <div class="email details">
-            <i class="fas fa-envelope"></i>
-            <div class="topic">Email</div>
-            <div class="text-one">atendimento@autoguide.com</div>
-          </div>
+    <header>
+      <nav>
+        <div class="menu-icon">
+          <span class="fas fa-bars"></span>
         </div>
-        <div class="right-side">
-          <div class="topic-text">Envie sua dúvida</div>
-          <p>
-            Se você tiver alguma dúvida de como o site funciona, contate-nos por
-            aqui!!
-          </p>
-          <form action="#">
-            <div class="input-box">
-              <input type="text" placeholder="Digite seu nome" />
+        <div class="logo">
+          <a href="../home/home.html"
+            ><img
+              src="/codigo/img/logo.png"
+              alt="logotipo"
+              width="100"
+              height="60"
+          /></a>
+        </div>
+        <div class="nav-items">
+          <li><a href="/codigo/pages/login/login.html">Entrar</a></li>
+          <li><a href="/codigo/pages/register/register.html">Cadastrar</a></li>
+          <li><a href="/codigo/pages/contato/contato.html">Contato</a></li>
+          <li><a href="/codigo/pages/sobre/sobre.html">Sobre</a></li>
+        </div>
+        <div class="search-icon">
+          <span class="fas fa-search"></span>
+        </div>
+        <div class="cancel-icon">
+          <span class="fas fa-times"></span>
+        </div>
+        <form action="#">
+          <input
+            type="search"
+            class="search-data"
+            placeholder="Pesquisar"
+            required
+          />
+          <button type="submit" class="fas fa-search"></button>
+        </form>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="content">
+          <div class="left-side">
+            <div class="address details">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="topic">Endereço</div>
+              <div class="text-one">Rua Walter Ianni, 255</div>
+              <div class="text-two">Bairro São Gabriel</div>
             </div>
-            <div class="input-box">
-              <input type="text" placeholder="Digite seu email" />
+            <div class="phone details">
+              <i class="fas fa-phone-alt"></i>
+              <div class="topic">Telefone</div>
+              <div class="text-one">(31) 3319-4444</div>
             </div>
-            <div class="input-box message-box">
-              <textarea placeholder="Digite sua mensagem"></textarea>
+            <div class="email details">
+              <i class="fas fa-envelope"></i>
+              <div class="topic">Email</div>
+              <div class="text-one">atendimento@autoguide.com</div>
             </div>
-            <div class="button">
-              <input type="button" value="Enviar" />
-            </div>
-          </form>
+          </div>
+          <div class="right-side">
+            <div class="topic-text">Envie sua dúvida</div>
+            <p>
+              Se você tiver alguma dúvida de como o site funciona, contate-nos
+              por aqui!!
+            </p>
+            <form action="#">
+              <div class="input-box">
+                <input type="text" placeholder="Digite seu nome" />
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Digite seu email" />
+              </div>
+              <div class="input-box message-box">
+                <textarea placeholder="Digite sua mensagem"></textarea>
+              </div>
+              <div class="button">
+                <input type="button" value="Enviar" />
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p>
+          Nos contate: (31) 91234-5678 Rua Walter Ianni, 255 - Bairro São
+          Gabriel Belo Horizonte - MG
+        </p>
+        <ul class="socials">
+          <li>
+            <a href="https://www.facebook.com"
+              ><i class="fa fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-autoguide"
+              ><i class="fa fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com"
+              ><i class="fa fa-linkedin-square"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

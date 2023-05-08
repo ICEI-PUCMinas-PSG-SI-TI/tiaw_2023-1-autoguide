@@ -17,6 +17,8 @@ body {
   justify-content: center;
 }
 
+/* CONTAINER BOX */
+
 main.container {
   background: white;
   width: 35rem;
@@ -45,6 +47,8 @@ main h2::before {
 .logo {
   padding-left: 9rem;
 }
+
+/* FORM CONTENT */
 
 form {
   display: flex;
@@ -126,6 +130,21 @@ form input[type="submit"]:hover {
   text-decoration: none;
   font-weight: bold;
 }
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  background-color: #ff3c00;
+  border-color: #ff3c00ce;
+}
+
+.btn-primary:hover {
+  background-color: #e13500;
+  border-color: #e13500;
+}
+
+/* FOOTER -> SOCIAL MEDIA LOGIN*/
 
 .footer {
   display: flex;

@@ -23,12 +23,14 @@
     <div class="row">
       <aside class="d-flex col-lg-7">
         <div class="form-image">
-          <a href="../home/home.html"><img src="/codigo/img/logo.png" alt="logotipo"></a>
+          <a href="../home/home.html"
+            ><img src="/codigo/img/logo.png" alt="logotipo"
+          /></a>
         </div>
       </aside>
       <main class="d-flex col-lg-5">
         <div class="form">
-          <form class="row g-3 needs-validation" novalidate>
+          <form class="row g-3 needs-validation" id="register-form" novalidate>
             <div class="form-header">
               <div class="title">
                 <h1>Cadastre-se</h1>
@@ -46,7 +48,7 @@
                 <input
                   type="text"
                   class="form-control form-control-lg"
-                  id="inputFirstName"
+                  id="firstName"
                   aria-describedby="inputFirstName"
                   required
                 />
@@ -66,7 +68,7 @@
                 <input
                   type="text"
                   class="form-control form-control-lg"
-                  id="inputLastName"
+                  id="lastName"
                   aria-describedby="inputLastName"
                   required
                 />
@@ -86,7 +88,7 @@
                 <input
                   type="email"
                   class="form-control form-control-lg"
-                  id="inputEmail"
+                  id="email"
                   aria-describedby="inputEmail"
                   required
                 />
@@ -108,7 +110,7 @@
                 <input
                   type="password"
                   class="form-control form-control-lg"
-                  id="inputPassword"
+                  id="password"
                   aria-describedby="inputPassword"
                   required
                 />
@@ -130,7 +132,7 @@
                 <input
                   type="password"
                   class="form-control form-control-lg"
-                  id="inputPasswordConfirm"
+                  id="confirmPassword"
                   aria-describedby="inputPasswordConfirm"
                   required
                 />
@@ -160,5 +162,6 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"
   ></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="index.js"></script>
 </html>

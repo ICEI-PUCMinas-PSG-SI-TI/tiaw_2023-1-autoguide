@@ -26,6 +26,8 @@ let getAccounts = JSON.parse(localStorage.getItem("accounts"))
 
 if (getAccounts) {
   var account = getAccounts
+} else {
+  account = []
 }
 
 // Register Button

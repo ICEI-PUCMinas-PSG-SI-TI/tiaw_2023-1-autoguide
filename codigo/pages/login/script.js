@@ -1,22 +1,23 @@
-const emailList = [
-  "email@example.com",
-  "email2@example.com",
-  "email3@example.com",
-]
-const passwordList = ["12345", "54321", "23042003"]
+let getAccounts = JSON.parse(localStorage.getItem("accounts"))
 
 const loginForm = document.getElementById("login-form")
+
+function verifyAccount(email, password) {
+  for (let index = 0; index < getAccounts.length; index++) {
+    const element = getAccounts[index]
+    if (element.email == email && element.password == password) {
+      return true
+    }
+  }
+}
 
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault()
 
-  const email = document.getElementById("email")
-  const password = document.getElementById("password")
+  const email = document.getElementById("email").value
+  const password = document.getElementById("password").value
 
-  if (
-    emailList.indexOf(email.value) !== -1 &&
-    passwordList.indexOf(password.value) !== -1
-  ) {
+  if (verifyAccount(email, password)) {
     const successAlert = Swal.mixin({
       toast: true,
       position: "top-end",
@@ -52,7 +53,7 @@ loginForm.addEventListener("submit", (e) => {
 
     erroAlert.fire({
       icon: "error",
-      title: "Erro ao realizar o Log-In, tente novamente",
+      title: "Senha ou e-mail incorretos! Tente novamente...",
     })
   }
 })

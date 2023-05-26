@@ -1,3 +1,5 @@
+import { showAlert, icons } from "../utils/alert.js"
+
 let getAccounts = JSON.parse(localStorage.getItem("accounts"))
 
 const loginForm = document.getElementById("login-form")
@@ -18,42 +20,20 @@ loginForm.addEventListener("submit", (e) => {
   const password = document.getElementById("password").value
 
   if (verifyAccount(email, password)) {
-    const successAlert = Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (e) => {
-        e.addEventListener("mouseenter", Swal.stopTimer)
-        e.addEventListener("mouseleave", Swal.resumeTimer)
-      },
-    })
-
-    successAlert.fire({
-      icon: "success",
-      title: "Sucesso ao relizar o login, redirecionando...",
-    })
+    showAlert(
+      "Sucesso ao relizar o login, redirecionando...",
+      icons.SUCCESS,
+      "top-end"
+    )
 
     setTimeout(() => {
       window.location.replace("/codigo/pages/home/home.html")
     }, 3000)
   } else {
-    const erroAlert = Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (e) => {
-        e.addEventListener("mouseenter", Swal.stopTimer)
-        e.addEventListener("mouseleave", Swal.resumeTimer)
-      },
-    })
-
-    erroAlert.fire({
-      icon: "error",
-      title: "Senha ou e-mail incorretos! Tente novamente...",
-    })
+    showAlert(
+      "Senha ou e-mail incorretos! Tente novamente...",
+      icons.ERROR,
+      "top-end"
+    )
   }
 })

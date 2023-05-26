@@ -1,3 +1,6 @@
+import { showAlert, icons } from "../utils/alert.js"
+
+// BOOTSTRAP VALIDATION
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 ;(function () {
   "use strict"
@@ -51,62 +54,25 @@ registerForm.addEventListener("submit", (e) => {
   }
 
   if (password.value != confirmPassword.value) {
-    const erroAlert = Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (e) => {
-        e.addEventListener("mouseenter", Swal.stopTimer)
-        e.addEventListener("mouseleave", Swal.resumeTimer)
-      },
-    })
-    erroAlert.fire({
-      icon: "error",
-      title: "Senhas não conferem, tente novamente!",
-    })
+    showAlert("Senhas não conferem, tente novamente!", icons.SUCCESS, "top-end")
   } else {
     if (registerForm.checkValidity()) {
       account.push(accountType)
       localStorage.setItem("accounts", JSON.stringify(account))
-
-      const successAlert = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (e) => {
-          e.addEventListener("mouseenter", Swal.stopTimer)
-          e.addEventListener("mouseleave", Swal.resumeTimer)
-        },
-      })
-      successAlert.fire({
-        icon: "success",
-        title: "Sucesso ao relizar o cadastro, redirecionando...",
-      })
-
+      showAlert(
+        "Sucesso ao relizar o cadastro, redirecionando...",
+        icons.SUCCESS,
+        "top-end"
+      )
       setTimeout(() => {
         window.location.replace("/codigo/pages/login/login.html")
       }, 3000)
     } else {
-      const erroAlert = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (e) => {
-          e.addEventListener("mouseenter", Swal.stopTimer)
-          e.addEventListener("mouseleave", Swal.resumeTimer)
-        },
-      })
-      erroAlert.fire({
-        icon: "error",
-        title:
-          "Erro ao realizar o Login, verifique se há campos vazios e tente novamente",
-      })
+      showAlert(
+        "Erro ao realizar o Login, verifique se há campos vazios e tente novamente",
+        icons.ERROR,
+        "top-end"
+      )
     }
   }
 })

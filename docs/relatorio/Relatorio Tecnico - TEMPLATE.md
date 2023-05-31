@@ -93,14 +93,18 @@
 ### Persona 1 &rarr; Júlia Westerman
 
 >Júlia possui 31 anos de idade, mora em Belo Horizonte e trabalha como gerente de marketing a 7 anos, possuindo um salário de 7.135,00. Seu hobbie é viajar para o interior aos finais de semana e fazer caminhadas para ficar em forma, que atualmente é o seu maior sonho
+![Exemplo de Persona](images/JuliaWesterman.jpg)
+ 
 
 ### Persona 2 &rarr; Pedro Pascal
 
 >É um jovem de 23 anos que ama carros, está sempre atrás de informações sobre, pretende comprar um em breve e passa grande parte do seu tempo vendo conteúdo sobre. Formou-se recentemente em arquitetura e trabalha como auxiliar de arquiteto, ganhando 2000 reais por mês. Pedro pensa muito no futuro e sonha em ver os frutos do seu trabalho florescendo, no momento isso vem com o seu primeiro carro.
+![Exemplo de Persona](images/PedroPascal.jpg)
 
 ### Persona 3 &rarr; Karine Rezende de Oliveira 
 
 >Karine possui 26 anos, mora em Montes Claros (MG) . Trabalha como Médica e recebe 4.500 por mês. É estudiosa, calma, gosta de viajar, praticar camping e sonha em se especializar em cirurgia pediátrica, além de conhecer o Brasil inteiro e ter sua estabilidade financeira.
+![Exemplo de Persona](images/KarineRezende.jpg)
 #
 
 > Relacione as personas identificadas no seu projeto. Lembre-se que 

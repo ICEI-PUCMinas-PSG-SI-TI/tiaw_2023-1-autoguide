@@ -43,6 +43,16 @@ const email = document.getElementById("email")
 const password = document.getElementById("password")
 const confirmPassword = document.getElementById("confirmPassword")
 
+function checkUserAlreadyExists() {
+  for (let index = 0; index < account.length; index++) {
+    const element = account[index]
+
+    if (element.email == email.value) {
+      return true
+    }
+  }
+}
+
 registerForm.addEventListener("submit", (e) => {
   e.preventDefault()
 
@@ -53,26 +63,38 @@ registerForm.addEventListener("submit", (e) => {
     password: password.value,
   }
 
-  if (password.value != confirmPassword.value) {
-    showAlert("Senhas não conferem, tente novamente!", icons.SUCCESS, "top-end")
+  if (checkUserAlreadyExists()) {
+    showAlert(
+      "Erro ao realizar o cadastro, usuário/email já existente...",
+      icons.ERROR,
+      "top-end"
+    )
   } else {
-    if (registerForm.checkValidity()) {
-      account.push(accountType)
-      localStorage.setItem("accounts", JSON.stringify(account))
+    if (password.value != confirmPassword.value) {
       showAlert(
-        "Sucesso ao relizar o cadastro, redirecionando...",
+        "Senhas não conferem, tente novamente!",
         icons.SUCCESS,
         "top-end"
       )
-      setTimeout(() => {
-        window.location.replace("/codigo/pages/login/login.html")
-      }, 3000)
     } else {
-      showAlert(
-        "Erro ao realizar o Login, verifique se há campos vazios e tente novamente",
-        icons.ERROR,
-        "top-end"
-      )
+      if (registerForm.checkValidity()) {
+        account.push(accountType)
+        localStorage.setItem("accounts", JSON.stringify(account))
+        showAlert(
+          "Sucesso ao relizar o cadastro, redirecionando...",
+          icons.SUCCESS,
+          "top-end"
+        )
+        setTimeout(() => {
+          window.location.replace("/codigo/pages/login/login.html")
+        }, 3000)
+      } else {
+        showAlert(
+          "Erro ao realizar o Login, verifique se há campos vazios e tente novamente",
+          icons.ERROR,
+          "top-end"
+        )
+      }
     }
   }
 })

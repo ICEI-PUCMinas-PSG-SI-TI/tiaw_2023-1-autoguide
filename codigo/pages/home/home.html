@@ -109,64 +109,51 @@
       <h4>Atendimento</h4>
     </div>
     <!--FIM DOS ITENS DA ESQUERDA DA PAGINA -->
-
-    <!-- Formulário de revisão -->
-
-    <div class="content">
-      <h5>CALCULAR PRÓXIMA REVISÃO</h5>
-      <div class="col-md-8 mx-auto">
-        <div class="form-container text-center">
-          <form>
-            <label
-              for="last-revision-date"
-              style="color: white; text-shadow: 2px 2px 4px #1d1d1d"
-              >Data da última revisão:</label
-            >
-            <input
-              type="date"
-              id="last-revision-date"
-              name="last-revision-date"
-            /><br />
-            <label
-              for="last-revision-mileage"
-              style="color: white; text-shadow: 2px 2px 4px #1d1d1d"
-              >Quilometragem da última revisão:</label
-            >
-            <input
-              type="number"
-              id="last-revision-mileage"
-              name="last-revision-mileage"
-            /><br />
-            <label
-              for="current-mileage"
-              style="color: white; text-shadow: 2px 2px 4px #1d1d1d"
-              >Quilometragem atual do veículo:</label
-            >
-            <input
-              type="number"
-              id="current-mileage"
-              name="current-mileage"
-            /><br />
-            <button
-              type="button"
-              onclick="calcularProximaRevisao()"
-              style="background-color: #1d1d1d"
-            >
-              Enviar
-            </button>
-          </form>
-          <p id="proxima-revisao" style="color: #ff3c00"></p>
+<!-- Formulário de revisão -->
+<div class="content">
+  <h5>CALCULAR PRÓXIMA REVISÃO</h5>
+  <div class="col-md-8 mx-auto">
+    <div class="form-container text-center">
+      <form>
+        <div class="row">
+          <div class="col-md-4">
+            <label for="marca" style="color: white; text-shadow: 2px 2px 4px #1d1d1d">Marca:</label>
+            <input type="text" id="marca" name="marca" />
+          </div>
+          <div class="col-md-4">
+            <label for="modelo" style="color: white; text-shadow: 2px 2px 4px #1d1d1d">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" />
+          </div>
+          <div class="col-md-4">
+            <label for="placa" style="color: white; text-shadow: 2px 2px 4px #1d1d1d">Placa:</label>
+            <input type="text" id="placa" name="placa" />
+          </div>
         </div>
-      </div>
+
+        <label for="last-revision-date" style="color: white; text-shadow: 2px 2px 4px #1d1d1d">Data da última revisão:</label>
+        <input type="date" id="last-revision-date" name="last-revision-date" /><br />
+
+        <label for="last-revision-mileage" style="color: white; text-shadow: 2px 2px 4px #1d1d1d">Quilometragem da última revisão:</label>
+        <input type="number" id="last-revision-mileage" name="last-revision-mileage" /><br />
+
+        <label for="current-mileage" style="color: white; text-shadow: 2px 2px 4px #1d1d1d">Quilometragem atual do veículo:</label>
+        <input type="number" id="current-mileage" name="current-mileage" /><br />
+
+        <button type="button" onclick="calcularProximaRevisao()" style="background-color: #1d1d1d">Enviar</button>
+      </form>
+      <p id="proxima-revisao" style="color: #ff3c00"></p>
     </div>
-    <!-- Fim Formulário de revisão -->
+  </div>
+</div>
+<!-- Fim Formulário de revisão -->
+
 
     <!-- RODAPÉ -->
     <footer>
       <div class="footer-content">
         <p>
-          Nos contate: (31) 91234-5678 Rua Walter Ianni, 255 - Bairro São
-          Gabriel Belo Horizonte - MG
+          Rua Walter Ianni, 255 - Bairro São
+          Gabriel <br> Belo Horizonte - MG
         </p>
         <ul class="socials">
           <li>

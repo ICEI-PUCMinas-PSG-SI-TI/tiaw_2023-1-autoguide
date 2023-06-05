@@ -54,46 +54,91 @@ function calcularProximaRevisao() {
 }
 
 // Igor Lucas Assunção Ribas
-document.getElementById("BtnCadastroVeiculo").addEventListener("click", () => {
-  let Placa = document.getElementById("placa").value;
-  let Marca = document.getElementById("marca").value;
-  let Modelo = document.getElementById("modelo").value;
-  let KmLR = document.getElementById("last-revision-mileage").value;
-  let KmAtual = document.getElementById("current-mileage").value;
+document
+  .getElementById("BtnCadastroVeiculo")
+  .addEventListener("click", function () {
+    //DECLARAÇÃO DE VARIÁVEIS
+    const Placa = document.getElementById("placa").value;
+    const Marca = document.getElementById("marca").value;
+    const Modelo = document.getElementById("modelo").value;
+    const KmLR = document.getElementById("last-revision-mileage").value;
+    const KmAtual = document.getElementById("current-mileage").value;
 
-  var dataAtual = new Date();
-  var ano = dataAtual.getFullYear();
-  var mes = dataAtual.getMonth() + 1; // Os meses são indexados a partir de zero, por isso é necessário adicionar 1
-  var dia = dataAtual.getDate();
+    var dataAtual = new Date();
+    var ano = dataAtual.getFullYear();
+    var mes = dataAtual.getMonth() + 1; // Os meses são indexados a partir de zero, por isso é necessário adicionar 1
+    var dia = dataAtual.getDate();
 
-  var Veiculos; // vetor de objetos veiculos
+    var Veiculos; // vetor de objetos veiculos
 
-  if (Placa == "" || Marca == "" || Modelo == "" || KmLR == "" || KmAtual == "") {
-    //Insira aqui o código para exibir uma mensagem de erro
-  } else {
-    Veiculos = {
-      placa: Placa,
-      marca: Marca,
-      modelo: Modelo,
-      KmLR: KmLR,
-      KmAtual: KmAtual,
-      DataCadastro: [dia, mes, ano],
-    }; // cria o objeto veículos
-
-    let getAccounts = JSON.parse(localStorage.getItem("accounts")); //pega o objeto account do localstorage, se não existir imprime uma mensagem
-
-    if (getAccounts) {
-      //verifica se o objeto account existe
-      var accounts = getAccounts;
-      let tamanho = accounts.length - 1;
-      accounts[tamanho].veiculos.push(Veiculos);
+    if (
+      Placa == "" ||
+      Marca == "" ||
+      Modelo == "" ||
+      KmLR == "" ||
+      KmAtual == ""
+    ) {
+      //Insira aqui o código para exibir uma mensagem de erro
     } else {
-      //Mensagem de erro dizedo que ainda não esta cadastrado
-      //Redirecione para a página de cadastro
+      Veiculos = {
+        placa: Placa,
+        marca: Marca,
+        modelo: Modelo,
+        KmLR: KmLR,
+        KmAtual: KmAtual,
+        DataCadastro: [dia, mes, ano],
+      }; // cria o objeto veículos
 
-      accounts = []; //Cria o vetor de usuários
+      let getAccounts = JSON.parse(localStorage.getItem("accounts")); //pega o objeto account do localstorage
+
+      if (getAccounts) {
+        //Veridica se o objeto account existe
+        var accounts = getAccounts;
+      } else {
+        //Mensagem de erro dizedo que ainda não esta cadastrado
+        //Redirecione para a página de cadastro de usuário
+        //Erro crítico
+        //Usei pra testes
+        accounts = []; //Cria o vetor de usuários
+      }
+      let veiculo_repetido = verificaveiculo(accounts, Veiculos)[0];
+      if (veiculo_repetido) {
+
+        //O veículo já está cadastrado e terá seus valores alterados
+        let tamanho = accounts.length - 1;
+        let index = verificaveiculo(accounts, Veiculos)[1];
+        for (i = 0; i < index.length; i++) {
+          accounts[tamanho].veiculos[index] = Veiculos; //Altera os valores de todos os veiculos com a mesma placa
+        }
+        localStorage.setItem("accounts", JSON.stringify(accounts));
+        
+      } else {
+
+        let tamanho = accounts.length - 1;
+        accounts[tamanho].veiculos.push(Veiculos);
+        localStorage.setItem("accounts", JSON.stringify(accounts)); //Finaliza a função e salva o objeto accounts no localstorage
+
+      }
     }
+  });
 
-    localStorage.setItem("accounts", JSON.stringify(accounts));
+
+
+function verificaveiculo(accounts, Veiculos) {
+  //função para verificar se o veículo já está cadastrado
+  let getAccounts = JSON.parse(localStorage.getItem("accounts")); //pega o objeto account do localstorage
+  if (getAccounts) {
+    //verifica se o objeto account existe
+    accounts = getAccounts;
+    for (let i = 0; i < accounts.length; i++) {
+      for (let x = 0; x < accounts[i].veiculos.length; x++) {
+        if (accounts[i].veiculos[x].placa == Veiculos.placa) {
+          var veiculo_jaexistente = true;
+          var index = [];
+          index.push(x);
+        }
+      }
+    }
   }
-});
+  return [veiculo_jaexistente, index];
+}

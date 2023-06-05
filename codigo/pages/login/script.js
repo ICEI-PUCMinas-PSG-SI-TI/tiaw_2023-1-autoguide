@@ -13,6 +13,7 @@ function verifyAccount(email, password) {
   }
 }
 
+
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault()
 

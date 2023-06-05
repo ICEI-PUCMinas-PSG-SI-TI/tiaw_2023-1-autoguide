@@ -1,9 +1,6 @@
-# Informações do Projeto
-`TÍTULO DO PROJETO`  
+# Informações do Projeto 
 
 ......  AUTOGUIDE ......
-
-`CURSO` 
 
 ......  Sistemas de Informação ......
 
@@ -49,7 +46,6 @@
 
 ## Objetivos
 
-......  COLOQUE AQUI O SEU TEXTO ......
 
 >Os objetivos do trabalho são desenvolver um software para solucionar o problema do gerenciamento de manutenção de veículos e criar uma interface amigável para facilitar o uso pelos usuários. Além disso, serão estabelecidos dois objetivos específicos para concentrar e aprofundar as características do trabalho. São eles:
 
@@ -62,7 +58,6 @@
 
 ## Público-Alvo
 
-......  COLOQUE AQUI O SEU TEXTO ......
 
 > O público-alvo da aplicação é composto predominantemente pelo público feminino, com uma média de idade em torno de 30 anos. No entanto, é importante ressaltar que a aplicação não se limitará apenas a esse grupo, podendo ser utilizada por pessoas de diferentes faixas etárias e gêneros.
 
@@ -72,7 +67,6 @@
  
 # Especificações do Projeto
 
-......  COLOQUE AQUI O SEU TEXTO ......
 
 > As especificações do projeto levam em conta todos os procedimentos utilizados para definir o escopo e viabilidade do projeto. Abaixo estão algumas das técnicas e ferramentas utilizadas:
 
@@ -105,23 +99,8 @@
 
 >Karine possui 26 anos, mora em Montes Claros (MG) . Trabalha como Médica e recebe 4.500 por mês. É estudiosa, calma, gosta de viajar, praticar camping e sonha em se especializar em cirurgia pediátrica, além de conhecer o Brasil inteiro e ter sua estabilidade financeira.
 ![Exemplo de Persona](images/KarineRezende.jpg)
-#
 
-> Relacione as personas identificadas no seu projeto. Lembre-se que 
-> você deve descrever precisamente e de forma personalizada o público alvo do seu projeto. 
-> Você pode incluir uma imagem da ficha de persona desenvolvida. 
->
-> Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina
-> e/ou nos seguintes links:
->
-> **Links Úteis**:
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> 
-> **Exemplo de Ficha**
-> ![Exemplo de Persona](images/persona.png)
+
  
 
 ## Histórias de Usuários
@@ -180,7 +159,6 @@ A tabela que segue apresenta os requisitos funcionais do projeto.
 
 # Projeto da Solução
 
-......  COLOQUE AQUI O SEU TEXTO ......
 > No projeto de desenvolvimento da aplicação web para gerenciamento de carros, foram utilizadas as seguintes tecnologias e frameworks:
 
 >HTML5 e CSS3: Foram utilizados os padrões HTML5 e CSS3 para estruturar e estilizar as páginas da aplicação, garantindo uma apresentação visual atraente e responsiva.
@@ -205,8 +183,6 @@ A tabela que segue apresenta os requisitos funcionais do projeto.
 
 ## Mapa de navegação
 
-......  COLOQUE AQUI O SEU TEXTO OU DIAGRAMA DE NAVEGAÇÃO .......
-
 > Inclua uma descrição textual ou um diagrama mostrando, sequencialmente, quais ações
 > um usuário deve realizar para utilizar todas as características do seu sistema. 
 
@@ -215,8 +191,6 @@ A tabela que segue apresenta os requisitos funcionais do projeto.
 > ![Exemplo de Diagrama de Navegação](images/userflow.jpg)
 
 # Conclusões
-
-......  COLOQUE AQUI O SEU TEXTO ......
 
 > Até o momento, foi possível avançar na criação da interface da aplicação, estabelecer os requisitos funcionais e iniciar a implementação das funcionalidades principais, como o registro de manutenções e o cálculo de aproximação de revisões. Além disso, foram definidos os perfis de usuários e suas necessidades específicas, o que serviu como base para o design e desenvolvimento da aplicação.
 

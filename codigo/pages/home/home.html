@@ -117,16 +117,16 @@
       <form>
         <div class="row">
           <div class="col-md-4">
-            <label for="marca" style="color: white; text-shadow: 2px 2px 4px #1d1d1d">Marca:</label>
-            <input type="text" id="marca" name="marca" />
+            <label for="marca" style="color: white; text-shadow: 2px 2px 4px #1d1d1d" >Marca:</label>
+            <input type="text" id="marca" name="marca" placeholder="Fiat" />
           </div>
           <div class="col-md-4">
-            <label for="modelo" style="color: white; text-shadow: 2px 2px 4px #1d1d1d">Modelo:</label>
-            <input type="text" id="modelo" name="modelo" />
+            <label for="modelo" style="color: white; text-shadow: 2px 2px 4px #1d1d1d" >Modelo:</label>
+            <input type="text" id="modelo" name="modelo" placeholder="Marea"/>
           </div>
           <div class="col-md-4">
-            <label for="placa" style="color: white; text-shadow: 2px 2px 4px #1d1d1d">Placa:</label>
-            <input type="text" id="placa" name="placa" />
+            <label for="placa" style="color: white; text-shadow: 2px 2px 4px #1d1d1d" >Placa:</label>
+            <input type="text" id="placa" name="placa" placeholder="XXX-0000" />
           </div>
         </div>
 
@@ -139,7 +139,7 @@
         <label for="current-mileage" style="color: white; text-shadow: 2px 2px 4px #1d1d1d">Quilometragem atual do veículo:</label>
         <input type="number" id="current-mileage" name="current-mileage" /><br />
 
-        <button type="button" onclick="calcularProximaRevisao()" style="background-color: #1d1d1d">Enviar</button>
+        <button id="BtnCadastroVeiculo" type="button" onclick="calcularProximaRevisao()" style="background-color: #1d1d1d">Enviar</button>
       </form>
       <p id="proxima-revisao" style="color: #ff3c00"></p>
     </div>

@@ -52,3 +52,48 @@ function calcularProximaRevisao() {
   // Exibir a data da próxima revisão na tela
   document.getElementById("proxima-revisao").textContent = proximaRevisao;
 }
+
+// Igor Lucas Assunção Ribas
+document.getElementById("BtnCadastroVeiculo").addEventListener("click", () => {
+  let Placa = document.getElementById("placa").value;
+  let Marca = document.getElementById("marca").value;
+  let Modelo = document.getElementById("modelo").value;
+  let KmLR = document.getElementById("last-revision-mileage").value;
+  let KmAtual = document.getElementById("current-mileage").value;
+
+  var dataAtual = new Date();
+  var ano = dataAtual.getFullYear();
+  var mes = dataAtual.getMonth() + 1; // Os meses são indexados a partir de zero, por isso é necessário adicionar 1
+  var dia = dataAtual.getDate();
+
+  var Veiculos; // vetor de objetos veiculos
+
+  if (Placa == "" || Marca == "" || Modelo == "" || KmLR == "" || KmAtual == "") {
+    //Insira aqui o código para exibir uma mensagem de erro
+  } else {
+    Veiculos = {
+      placa: Placa,
+      marca: Marca,
+      modelo: Modelo,
+      KmLR: KmLR,
+      KmAtual: KmAtual,
+      DataCadastro: [dia, mes, ano],
+    }; // cria o objeto veículos
+
+    let getAccounts = JSON.parse(localStorage.getItem("accounts")); //pega o objeto account do localstorage, se não existir imprime uma mensagem
+
+    if (getAccounts) {
+      //verifica se o objeto account existe
+      var accounts = getAccounts;
+      let tamanho = accounts.length - 1;
+      accounts[tamanho].veiculos.push(Veiculos);
+    } else {
+      //Mensagem de erro dizedo que ainda não esta cadastrado
+      //Redirecione para a página de cadastro
+
+      accounts = []; //Cria o vetor de usuários
+    }
+
+    localStorage.setItem("accounts", JSON.stringify(accounts));
+  }
+});

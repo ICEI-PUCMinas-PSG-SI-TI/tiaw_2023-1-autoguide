@@ -17,10 +17,15 @@ function calcularProximaRevisao() {
 
   // Calcular a data da próxima revisão com base no intervalo de tempo e quilometragem
   const dozeMesesEmMS = 12 * 30 * 24 * 60 * 60 * 1000;
+
+  // Calcular os meses restantes para a próxima revisão
+  const mesesRestantes = 12 - currentDate.getMonth();
+
   let proximaRevisao;
 
   if (currentMileage < lastRevisionMileage) {
-    proximaRevisao = "A quilometragem atual não pode ser menor do que a última revisão.";
+    proximaRevisao =
+      "A quilometragem atual não pode ser menor do que a última revisão.";
     document.getElementById("proxima-revisao").classList.add("blinking");
   } else if (lastRevisionDate > currentDate) {
     proximaRevisao = "A data informada é maior do que a data atual.";
@@ -29,7 +34,8 @@ function calcularProximaRevisao() {
     proximaRevisao = "Cuidado! É necessário realizar uma manutenção urgente!";
     document.getElementById("proxima-revisao").classList.add("blinking");
   } else if (currentDate - lastRevisionDate >= dozeMesesEmMS) {
-    proximaRevisao = "A última revisão foi feita há muito tempo. É necessário realizar uma manutenção urgente";
+    proximaRevisao =
+      "A última revisão foi feita há muito tempo. É necessário realizar uma manutenção urgente";
     document.getElementById("proxima-revisao").classList.add("blinking");
   } else {
     proximaRevisao = `A próxima revisão deve ser feita em ${mesesRestantes} meses ou ${
@@ -37,13 +43,11 @@ function calcularProximaRevisao() {
     } km.`;
     document.getElementById("proxima-revisao").classList.remove("blinking");
   }
-  
+
   // Remover a classe "blinking" após 3 segundos
-  setTimeout(function() {
+  setTimeout(function () {
     document.getElementById("proxima-revisao").classList.remove("blinking");
   }, 2000);
-  
-  
 
   // Exibir a data da próxima revisão na tela
   document.getElementById("proxima-revisao").textContent = proximaRevisao;

@@ -1,8 +1,10 @@
-let UsuarioLogado;
-let UserLogado= false;
+let UsuarioLogado; //Variável global para armazenar o usuário logado: linha 9
+let UserLogado = false; //variável global para verificar se o usuário está logado: linha 6
+var posicao; //posição do usuário logado no vetor de contas(Gambiarra)
+
 //Verifica se o usuário está logado
 $("document").ready(() => {
-  let userlogado =  JSON.parse(localStorage.getItem("userLoggedIn"));
+  let userlogado = JSON.parse(localStorage.getItem("userLoggedIn"));
   if (userlogado) {
     UsuarioLogado = userlogado;
     UserLogado = true;
@@ -107,29 +109,25 @@ document
 
       let getAccounts = JSON.parse(localStorage.getItem("accounts")); //pega o objeto account do loc_alstorage
 
-      if (getAccounts) {
-        //Veridica se o objeto account existe
-        var accounts = getAccounts;
-      } else {
+      if (!getAccounts) {
         //Mensagem de erro dizedo que ainda não esta cadastrado
         //Redirecione para a página de cadastro de usuário
         //Erro crítico
         //Usei pra testes
-        accounts = []; //Cria o vetor de usuários
-      }
-      let veiculo_repetido = verificaveiculo(accounts, Veiculos)[0];
-      if (veiculo_repetido) {
-        //O veículo já está cadastrado e terá seus valores alterados
-        let tamanho = accounts.length - 1;
-        let index = verificaveiculo(accounts, Veiculos)[1];
-        for (i = 0; i < index.length; i++) {
-          accounts[tamanho].veiculos[index] = Veiculos; //Altera os valores de todos os veiculos com a mesma placa
-        }
-        localStorage.setItem("accounts", JSON.stringify(accounts));
       } else {
-        let tamanho = accounts.length - 1;
-        accounts[tamanho].veiculos.push(Veiculos);
-        localStorage.setItem("accounts", JSON.stringify(accounts)); //Finaliza a função e salva o objeto accounts no localstorage
+        //Veridica se o objeto account existe
+        var accounts = getAccounts;
+        let veiculo_repetido = verificaveiculo(accounts, Veiculos)[0];
+        if (veiculo_repetido) {
+          //O veículo já está cadastrado e terá seus valores alterados
+          let index = verificaveiculo(accounts, Veiculos)[1];
+          accounts[posicao].veiculos[index] = Veiculos; //Altera os valores de todos os veiculos com a mesma placa
+
+          localStorage.setItem("accounts", JSON.stringify(accounts));
+        } else {
+          accounts[posicao].veiculos.push(Veiculos);
+          localStorage.setItem("accounts", JSON.stringify(accounts)); //Finaliza a função e salva o objeto accounts no localstorage
+        }
       }
     }
   });
@@ -140,13 +138,17 @@ function verificaveiculo(accounts, Veiculos) {
   if (getAccounts) {
     //verifica se o objeto account existe
     accounts = getAccounts;
+
     for (let i = 0; i < accounts.length; i++) {
-      for (let x = 0; x < accounts[i].veiculos.length; x++) {
-        if (accounts[i].veiculos[x].placa == Veiculos.placa) {
-          var veiculo_jaexistente = true;
-          var index = [];
-          index.push(x);
-        }
+      //Percorre o vetor de contas e procura a conta do usuário logado
+      if (accounts[i].email == UsuarioLogado.email) {
+        posicao = i; //retorna a posição do usuário logado(no vetor de contas)
+      }
+    }
+    for (let x = 0; x < accounts[posicao].veiculos.length; x++) {
+      if (accounts[posicao].veiculos[x].placa == Veiculos.placa) {
+        var veiculo_jaexistente = true;
+        var index = x;
       }
     }
   }

@@ -1,3 +1,19 @@
+let UsuarioLogado;
+let UserLogado= false;
+//Verifica se o usuário está logado
+$("document").ready(() => {
+  let userlogado =  JSON.parse(localStorage.getItem("userLoggedIn"));
+  if (userlogado) {
+    UsuarioLogado = userlogado;
+    UserLogado = true;
+  } else {
+    alert("Não há usuário logado"); //Imprime uma mensagem de erro
+    setTimeout(function () {
+      window.location.href = "/codigo/pages/login/login.html";
+    }, 3000);
+  } //Redireciona para a página de login
+});
+
 function calcularProximaRevisao() {
   // Obter a data e quilometragem da última revisão do carro
   const lastRevisionDate = new Date(
@@ -103,7 +119,6 @@ document
       }
       let veiculo_repetido = verificaveiculo(accounts, Veiculos)[0];
       if (veiculo_repetido) {
-
         //O veículo já está cadastrado e terá seus valores alterados
         let tamanho = accounts.length - 1;
         let index = verificaveiculo(accounts, Veiculos)[1];
@@ -111,18 +126,13 @@ document
           accounts[tamanho].veiculos[index] = Veiculos; //Altera os valores de todos os veiculos com a mesma placa
         }
         localStorage.setItem("accounts", JSON.stringify(accounts));
-        
       } else {
-
         let tamanho = accounts.length - 1;
         accounts[tamanho].veiculos.push(Veiculos);
         localStorage.setItem("accounts", JSON.stringify(accounts)); //Finaliza a função e salva o objeto accounts no localstorage
-
       }
     }
   });
-
-
 
 function verificaveiculo(accounts, Veiculos) {
   //função para verificar se o veículo já está cadastrado

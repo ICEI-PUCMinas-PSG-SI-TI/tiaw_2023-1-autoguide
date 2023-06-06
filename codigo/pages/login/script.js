@@ -13,6 +13,7 @@ function verifyAccount(email, password) {
   for (let index = 0; index < getAccounts.length; index++) {
     const element = getAccounts[index]
     if (element.email == email && element.password == password) {
+      
       const loggedInUserInfo = {
         name: element.name,
         lastName: element.lastName,

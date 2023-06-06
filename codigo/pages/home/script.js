@@ -89,7 +89,7 @@ document
         DataCadastro: [dia, mes, ano],
       }; // cria o objeto veículos
 
-      let getAccounts = JSON.parse(localStorage.getItem("accounts")); //pega o objeto account do localstorage
+      let getAccounts = JSON.parse(localStorage.getItem("accounts")); //pega o objeto account do loc_alstorage
 
       if (getAccounts) {
         //Veridica se o objeto account existe

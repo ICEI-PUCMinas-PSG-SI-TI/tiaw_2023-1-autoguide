@@ -6,26 +6,25 @@ let getAccounts = JSON.parse(localStorage.getItem("accounts"))
 let getCurrentAccount = JSON.parse(localStorage.getItem("userLoggedIn"))
 
 if (getCurrentAccount) {
-  localStorage.removeItem("userLoggedIn")
+  window.location.replace("/codigo/pages/home/home.html")
 }
 
 function verifyAccount(email, password) {
   for (let index = 0; index < getAccounts.length; index++) {
     const element = getAccounts[index]
     if (element.email == email && element.password == password) {
-      
-      const loggedInUserInfo = {
-        name: element.name,
-        lastName: element.lastName,
-        email: element.email,
+      if (!getCurrentAccount) {
+        const loggedInUserInfo = {
+          name: element.name,
+          lastName: element.lastName,
+          email: element.email,
+        }
+        localStorage.setItem("userLoggedIn", JSON.stringify(loggedInUserInfo))
       }
-
-      localStorage.setItem("userLoggedIn", JSON.stringify(loggedInUserInfo))
       return true
     }
   }
 }
-
 
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault()

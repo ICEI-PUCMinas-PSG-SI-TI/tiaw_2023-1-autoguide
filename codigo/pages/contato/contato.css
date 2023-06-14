@@ -7,7 +7,16 @@
   font-family: "Montserrat", sans-serif;
 }
 
-/* CABEÇALHO */
+/*CABECALHO*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
 
 nav {
   background: #111;
@@ -15,7 +24,7 @@ nav {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 120px;
   padding: 0 100px;
 }
 
@@ -24,6 +33,10 @@ nav .logo {
   font-size: 30px;
   font-weight: 600;
   letter-spacing: -1px;
+}
+
+nav .logo > a > img {
+  height: 80px;
 }
 
 nav .nav-items {
@@ -63,7 +76,7 @@ nav form .search-data {
   width: 100%;
   height: 100%;
   padding: 0 10px;
-  color: #fff;
+  color: #000000;
   font-size: 17px;
   border: none;
   font-weight: 500;
@@ -260,6 +273,8 @@ nav .logo.space {
   margin: 10px 0;
 }
 
+/*FIM CABECALHO*/
+
 /* PARTE PRINCIPAL */
 
 body > main > .container {
@@ -406,70 +421,47 @@ body > main > .container {
   }
 }
 
-/* FOOTER */
+/*RODAPE*/
 
-footer {
-  /* position: absolute; */
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #111;
-  height: auto;
-  width: 100vw;
-  color: #fff;
-}
 
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.footer-basic {
+  margin-top: 50px;
   text-align: center;
+  padding: 40px 0;
+  background: #111;
+  color: #ffffff;
 }
 
-.footer-content h3 {
-  font-size: 2.1rem;
-  font-weight: 500;
-  text-transform: capitalize;
-  line-height: 3rem;
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 15px;
 }
 
-.footer-content p {
-  max-width: 500px;
-  margin: 10px auto;
-  line-height: 28px;
-  font-size: 14px;
-  color: #cacdd2;
-}
-
-.socials {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem 0 3rem 0;
-}
-
-.socials li {
-  margin: 0 10px;
-}
-
-.socials a {
-  text-decoration: none;
-  color: #fff;
-  border: 1.1px solid white;
-  padding: 5px;
-
+.footer-basic .social>a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
   border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+  margin-top: 15px;
 }
 
-.socials a i {
-  font-size: 1.1rem;
-  width: 20px;
-
-  transition: color 0.4s ease;
+.footer-basic .social>a:hover {
+  opacity: 0.9;
 }
 
-.socials a:hover i {
-  color: #ff3c00;
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
 }
+
+/*FIM RODAPE*/

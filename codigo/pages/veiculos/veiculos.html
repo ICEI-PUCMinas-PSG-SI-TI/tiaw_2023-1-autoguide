@@ -15,7 +15,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="icon" href="/codigo/img/logo.png" type="image/png" />
-  <link href="sobre.css" rel="stylesheet" type="text/css" />
+  <link href="veiculos.css" rel="stylesheet" type="text/css" />
   <title>AutoGuide</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -37,16 +37,7 @@
 
 
     </div>
-    <div class="search-icon">
-      <span class="fas fa-search"></span>
-    </div>
-    <div class="cancel-icon">
-      <span class="fas fa-times"></span>
-    </div>
-    <form action="#">
-      <input type="search" class="search-data" placeholder="Pesquisar" required>
-      <button type="submit" class="fas fa-search"></button>
-    </form>
+   
   </nav>
 
   <script>
@@ -77,22 +68,55 @@
   </script>
   <!-- FIM DO CABECALHO -->
 
-  <main>
-    <h1 style="color:hsl(14, 100%, 50%);"><b>Quem Somos</b></h1>
-    <p>A AutoGuide é uma empresa que oferece serviços de ajuda em manutenção preventiva e corretiva em veículos de todas as marcas e modelos.
-       Desde 2023, nossa equipe de profissionais altamente qualificados criaram o programa para garantir a segurança e o bom desempenho dos veículos dos nossos clientes.</p>
-    <h2 style="color:hsl(14, 100%, 50%);"><b>Nossa Missão</b></h2>
-    <p>Nossa missão é oferecer assistência a serviços de manutenção automotiva com qualidade e eficiência, buscando sempre o bom uso de seu veíclo e a satisfação dos nossos clientes.</p>
-    <h2 style="color:hsl(14, 100%, 50%);"><b>Nossa Visão</b></h2>
-    <p>Nossa visão é ser referência no mercado de manutenção automotiva, oferecendo serviços de excelência e contribuindo para a segurança e o bem-estar dos nossos clientes.</p>
-    <h2 style="color:hsl(14, 100%, 50%);"><b>Valores</b></h2>
-    <ul>
-      <li>Comprometimento com a qualidade</li>
-      <li>Transparência e honestidade em todas as relações</li>
-      <li>Respeito aos nossos clientes e colaboradores</li>
-      <li>Constante busca por inovação e aprimoramento</li>
-    </ul>
-  </main>
+
+  <!-- VEICULOS -->
+  <!DOCTYPE html>
+  <html>
+  
+  <head>
+    <title>Formulário de Veículos</title>
+  
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  
+    <script>
+      function adicionarVeiculo() {
+        var formulario = document.getElementById("formulario");
+        var clone = formulario.cloneNode(true);
+        formulario.parentNode.appendChild(clone);
+      }
+    </script>
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="veiculo-form">
+        <h1>Meus Veículos</h1>
+        <form>
+          <h3>Veículo 1</h3>
+          <label for="placa1">Placa:</label>
+          <input type="text" id="placa1" name="placa1">
+  
+          <label for="marca1">Marca:</label>
+          <input type="text" id="marca1" name="marca1">
+  
+          <label for="modelo1">Modelo:</label>
+          <input type="text" id="modelo1" name="modelo1">
+  
+          <label for="ano1">Ano:</label>
+          <input type="text" id="ano1" name="ano1">
+  
+          <label for="quilometragem1">Quilometragem:</label>
+          <input type="text" id="quilometragem1" name="quilometragem1">
+  
+          <input type="submit" value="Enviar">
+        </form>
+      </div>
+    </div>
+    
+  
+
+  <!-- FIM VEICULOS -->
+
   
   <!-- RODAPÉ -->
   <footer>

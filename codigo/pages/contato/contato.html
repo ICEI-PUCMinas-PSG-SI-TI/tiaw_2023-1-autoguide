@@ -17,39 +17,57 @@
     <title>Contato - AutoGuide</title>
     <link rel="icon" href="/codigo/img/logo.png" type="image/png" />
     <link rel="stylesheet" href="contato.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   </head>
 
   <body>
     <header>
-      <nav>
-        <div class="menu-icon">
-          <span class="fas fa-bars"></span>
-        </div>
-        <div class="logo">
-          <a href="../home/home.html"> <img src="/codigo/img/logo.png" alt="logotipo" width="100" height="60"></a>
-        </div>
-                <div class="nav-items">
-          <li><a href="/codigo/pages/login/login.html">Entrar</a></li>
-          <li><a href="/codigo/pages/register/register.html">Cadastrar</a></li>
-          <li><a href="/codigo/pages/contato/contato.html">Contato</a></li>
-          <li><a href="/codigo/pages/sobre/sobre.html">Sobre</a></li>
-        </div>
-        <div class="search-icon">
-          <span class="fas fa-search"></span>
-        </div>
-        <div class="cancel-icon">
-          <span class="fas fa-times"></span>
-        </div>
-        <form action="#">
-          <input
-            type="search"
-            class="search-data"
-            placeholder="Pesquisar"
-            required
-          />
-          <button type="submit" class="fas fa-search"></button>
-        </form>
-      </nav>
+      <!-- CABECALHO -->
+  <nav>
+    <div class="menu-icon">
+      <span class="fas fa-bars"></span>
+    </div>
+    <div class="logo">
+      <a href="../home/home.html"><img src="/codigo/img/logo.png" alt="logotipo" width="100" height="60" /></a>
+    </div>
+    <div class="nav-items">
+      <li><a href="/codigo/pages/login/login.html">Entrar</a></li>
+      <li><a href="/codigo/pages/register/register.html">Cadastrar</a></li>
+      <li><a href="/codigo/pages/contato/contato.html">Contato</a></li>
+      <li><a href="/codigo/pages/sobre/sobre.html">Sobre</a></li>
+    </div>
+
+  </nav>
+
+  <script>
+    const menuBtn = document.querySelector(".menu-icon span")
+    const searchBtn = document.querySelector(".search-icon")
+    const cancelBtn = document.querySelector(".cancel-icon")
+    const items = document.querySelector(".nav-items")
+    const form = document.querySelector("form")
+    menuBtn.onclick = () => {
+      items.classList.add("active")
+      menuBtn.classList.add("hide")
+      searchBtn.classList.add("hide")
+      cancelBtn.classList.add("show")
+    }
+    cancelBtn.onclick = () => {
+      items.classList.remove("active")
+      menuBtn.classList.remove("hide")
+      searchBtn.classList.remove("hide")
+      cancelBtn.classList.remove("show")
+      form.classList.remove("active")
+      cancelBtn.style.color = "#ff3d00"
+    }
+    searchBtn.onclick = () => {
+      form.classList.add("active")
+      searchBtn.classList.add("hide")
+      cancelBtn.classList.add("show")
+    }
+  </script>
+  <!-- FIM DO CABECALHO -->
     </header>
     <main>
       <div class="container">
@@ -96,38 +114,29 @@
         </div>
       </div>
     </main>
-    <footer>
-      <div class="footer-content">
-        <p>
-          Nos contate: (31) 91234-5678</p>
-          Rua Walter Ianni, 255 - Bairro São
-          Gabriel Belo Horizonte - MG
-        </p>
-        <ul class="socials">
-          <li>
-            <a href="https://www.facebook.com"
-              ><i class="fa fa-facebook"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-autoguide"
-              ><i class="fa fa-github"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com"
-              ><i class="fa fa-linkedin-square"></i
-            ></a>
-          </li>
-        </ul>
-        &copy; AutoGuide - 2023
-    </footer>
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="footer-basic">
+      <div class="student">
+        <p>Rua Walter Ianni, 255 - Bairro São Gabriel</p>
+        <p>Belo Horizonte - MG</p>
+      </div>
+
+      <div class="social">
+        <a href="#"><i class="icon ion-social-facebook"></i></a>
+        <a href="#"><i class="icon ion-social-instagram"></i></a>
+        <a href="#"><i class="icon ion-social-twitter"></i></a>
+        <a href="https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-autoguide"><i
+            class="icon ion-social-github"></i></a>
+      </div>
+
+      <p class="copyright">AutoGuide © 2023</p>
+    </div>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <!-- FIM DO RODAPÉ -->
   </body>
 </html>

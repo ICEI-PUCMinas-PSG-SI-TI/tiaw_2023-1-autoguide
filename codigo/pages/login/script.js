@@ -1,7 +1,11 @@
 import { showAlert, icons } from "../utils/alert.js"
+import { setFakeData } from "../../dados.js"
+
+window.onload = () => {
+  setFakeData()
+}
 
 const loginForm = document.getElementById("login-form")
-
 let getAccounts = JSON.parse(localStorage.getItem("accounts"))
 let getCurrentAccount = JSON.parse(localStorage.getItem("userLoggedIn"))
 
@@ -49,5 +53,3 @@ loginForm.addEventListener("submit", (e) => {
     )
   }
 })
-
-window.onload = () => {}

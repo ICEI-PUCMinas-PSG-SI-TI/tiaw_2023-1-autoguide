@@ -21,73 +21,63 @@
 </head>
 
 <body>
-  <!-- CABECALHO -->
+ <!-- CABECALHO -->
   <nav>
     <div class="menu-icon">
       <span class="fas fa-bars"></span>
     </div>
     <div class="logo">
-      <a href="../home/home.html"> <img src="/codigo/img/logo.png" alt="logotipo" width="100" height="60"></a>
+      <a href="../home/home.html"><img src="/codigo/img/logo.png" alt="logotipo" width="100" height="60" /></a>
     </div>
     <div class="nav-items">
       <li><a href="/codigo/pages/login/login.html">Entrar</a></li>
       <li><a href="/codigo/pages/register/register.html">Cadastrar</a></li>
+      <li><a href="/codigo/pages/perfil/perfil.html">Perfil</a></li>
+      <li><a href="/codigo/pages/veiculos/veiculos.html">Veiculos</a></li>
       <li><a href="/codigo/pages/contato/contato.html">Contato</a></li>
       <li><a href="/codigo/pages/sobre/sobre.html">Sobre</a></li>
-
-
     </div>
-   
+    <div class="search-icon">
+      <span class="fas fa-search"></span>
+    </div>
+    <div class="cancel-icon">
+      <span class="fas fa-times"></span>
+    </div>
+
   </nav>
 
   <script>
-    const menuBtn = document.querySelector(".menu-icon span");
-    const searchBtn = document.querySelector(".search-icon");
-    const cancelBtn = document.querySelector(".cancel-icon");
-    const items = document.querySelector(".nav-items");
-    const form = document.querySelector("form");
+    const menuBtn = document.querySelector(".menu-icon span")
+    const searchBtn = document.querySelector(".search-icon")
+    const cancelBtn = document.querySelector(".cancel-icon")
+    const items = document.querySelector(".nav-items")
+    const form = document.querySelector("form")
     menuBtn.onclick = () => {
-      items.classList.add("active");
-      menuBtn.classList.add("hide");
-      searchBtn.classList.add("hide");
-      cancelBtn.classList.add("show");
+      items.classList.add("active")
+      menuBtn.classList.add("hide")
+      searchBtn.classList.add("hide")
+      cancelBtn.classList.add("show")
     }
     cancelBtn.onclick = () => {
-      items.classList.remove("active");
-      menuBtn.classList.remove("hide");
-      searchBtn.classList.remove("hide");
-      cancelBtn.classList.remove("show");
-      form.classList.remove("active");
-      cancelBtn.style.color = "#ff3d00";
+      items.classList.remove("active")
+      menuBtn.classList.remove("hide")
+      searchBtn.classList.remove("hide")
+      cancelBtn.classList.remove("show")
+      form.classList.remove("active")
+      cancelBtn.style.color = "#ff3d00"
     }
     searchBtn.onclick = () => {
-      form.classList.add("active");
-      searchBtn.classList.add("hide");
-      cancelBtn.classList.add("show");
+      form.classList.add("active")
+      searchBtn.classList.add("hide")
+      cancelBtn.classList.add("show")
     }
   </script>
   <!-- FIM DO CABECALHO -->
 
 
+
   <!-- VEICULOS -->
-  <!DOCTYPE html>
-  <html>
-  
-  <head>
-    <title>Formulário de Veículos</title>
-  
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  
-    <script>
-      function adicionarVeiculo() {
-        var formulario = document.getElementById("formulario");
-        var clone = formulario.cloneNode(true);
-        formulario.parentNode.appendChild(clone);
-      }
-    </script>
-  </head>
-  
-  <body>
+
     <div class="container">
       <div class="veiculo-form">
         <h1>Meus Veículos</h1>
@@ -108,12 +98,30 @@
           <label for="quilometragem1">Quilometragem:</label>
           <input type="text" id="quilometragem1" name="quilometragem1">
   
-          <input type="submit" value="Enviar">
         </form>
+        <form>
+          <h3>Veículo 2</h3>
+          <label for="placa1">Placa:</label>
+          <input type="text" id="placa1" name="placa1">
+  
+          <label for="marca1">Marca:</label>
+          <input type="text" id="marca1" name="marca1">
+  
+          <label for="modelo1">Modelo:</label>
+          <input type="text" id="modelo1" name="modelo1">
+  
+          <label for="ano1">Ano:</label>
+          <input type="text" id="ano1" name="ano1">
+  
+          <label for="quilometragem1">Quilometragem:</label>
+          <input type="text" id="quilometragem1" name="quilometragem1">
+        </form>
+
+        <form>
+
+        
       </div>
     </div>
-    
-  
 
   <!-- FIM VEICULOS -->
 

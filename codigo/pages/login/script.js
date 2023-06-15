@@ -49,5 +49,3 @@ loginForm.addEventListener("submit", (e) => {
     )
   }
 })
-
-window.onload = () => {}

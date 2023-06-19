@@ -407,21 +407,19 @@ nav .logo.space {
     margin-bottom: 20px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #000000;
-    text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
   }
 
   form {
     background-color: #fff;
     border-radius: 30px;
     padding: 20px;
-    margin-bottom: 35px;
-    margin-left: 50px;
-    margin-right: 50px;
-    font-weight: bold;
     display: flex;
+    font-weight: bold;
     flex-direction: column;
-
+    float: left;
+    margin: 50px;
   }
 
   h3 {
@@ -435,32 +433,13 @@ nav .logo.space {
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-bottom: 10px;
+    width: 400px;
   }
 
-  input[type="submit"] {
-    background-color: #141414;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100px;
-
-  }
-
-  input[type="submit"]:hover {
-    background-color: #808080;
-  }
 
   .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+  }
 
-  }
-  
-  .veiculo-form {
-    text-align: center;
-    width: 800px;
-  }
+
    /*VEICULOS*/

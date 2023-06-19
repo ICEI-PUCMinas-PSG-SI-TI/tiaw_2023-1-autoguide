@@ -1,8 +1,15 @@
 import { showAlert, icons } from "../utils/alert.js"
+import { setFakeData } from "./dados.js"
+
+let getAccounts
+
+window.onload = async () => {
+  await setFakeData()
+  getAccounts = JSON.parse(localStorage.getItem("accounts"))
+}
 
 const loginForm = document.getElementById("login-form")
 
-let getAccounts = JSON.parse(localStorage.getItem("accounts"))
 let getCurrentAccount = JSON.parse(localStorage.getItem("userLoggedIn"))
 
 if (getCurrentAccount) {

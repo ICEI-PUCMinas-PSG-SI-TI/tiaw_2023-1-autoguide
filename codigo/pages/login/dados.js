@@ -5,14 +5,15 @@ let dados = [
     lastName: "Sem Braço",
     email: "joao@gmail.com",
     password: "12345",
-    phone: "",
+    phone: "31999999999",
     address1: "",
     address2: "",
     veiculos: [
       {
-        plate: "",
-        brand: "",
-        model: "",
+        plate: "BRA2E19",
+        brand: "Renault",
+        model: "Duster 2015",
+        year: "2015",
       },
     ],
   },
@@ -26,9 +27,10 @@ let dados = [
     address2: "",
     veiculos: [
       {
-        plate: "",
-        brand: "",
-        model: "",
+        plate: "QRM7E33",
+        brand: "Fiat",
+        model: "Palio",
+        year: "2013",
       },
     ],
   },
@@ -42,9 +44,10 @@ let dados = [
     address2: "",
     veiculos: [
       {
-        plate: "",
-        brand: "",
-        model: "",
+        plate: "QOZ-1774",
+        brand: "Ford",
+        model: "Mustang Mach 1",
+        year: "1969",
       },
     ],
   },
@@ -52,7 +55,7 @@ let dados = [
 
 function setFakeData() {
   if (!getAccounts) {
-    localStorage.setItem("accounts", JSON.stringify({ dados }))
+    localStorage.setItem("accounts", JSON.stringify(dados))
   }
 }
 

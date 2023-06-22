@@ -6,8 +6,6 @@ Um sistema com objetivo de auxiliar as pessoas que não possuem conhecimentos au
 
 * Érick Fernando dos Santos Vieira;
 * Igor Lucas Assunção Ribas;
-* Marcelo Americano Oliveira;
-* Mathaüs Tertulliano Souza Santos;
 * Pedro Henrique Oliveira Siqueira.
 
 ## Professores responsáveis:

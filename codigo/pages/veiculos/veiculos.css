@@ -166,7 +166,7 @@ nav .nav-items li a {
 }
 
 nav .nav-items li a:hover {
-  color: #ff3d00;
+  color: #E65836;
 }
 
 nav form {
@@ -176,7 +176,7 @@ nav form {
   background: #ffffff;
   min-width: 18% !important;
   border-radius: 20px;
-  border: 1px solid rgb(255, 60, 0);
+  border: 1px solid #E65836;
 }
 
 nav form .search-data {
@@ -194,14 +194,14 @@ nav form button {
   padding: 0 15px;
   color: #fff;
   font-size: 20px;
-  background: #ff3d00;
+  background: #E65836;
   border: none;
   border-radius: 20px;
   cursor: pointer;
 }
 
 nav form button:hover {
-  background: #ff3c00af;
+  background: #3b3b3b;
 }
 
 nav .menu-icon,
@@ -211,7 +211,7 @@ nav .search-icon {
   text-align: center;
   margin: 0 50px;
   font-size: 18px;
-  color: #ff3c00af;
+  color: #E65836;
   cursor: pointer;
   display: none;
 }
@@ -399,21 +399,21 @@ nav .logo.space {
    body {
     font-family: Arial,
       sans-serif;
-      background: #ff3d00;
+      background: #2e2e2e;
   }
 
   h1 {
     margin-top: 20px;
     margin-bottom: 20px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #000000;
+    color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
   }
 
   form {
-    background-color: #fff;
-    border-radius: 30px;
+    background-color: #E65836;
+    border-radius: 10px;
     padding: 20px;
     display: flex;
     font-weight: bold;
@@ -425,6 +425,7 @@ nav .logo.space {
   h3 {
     color: #000000;
     margin-bottom: 10px;
+    text-align: center;
   }
 
 
@@ -434,6 +435,7 @@ nav .logo.space {
     border: 1px solid #ccc;
     margin-bottom: 10px;
     width: 400px;
+    text-align: center;
   }
 
 
@@ -441,5 +443,8 @@ nav .logo.space {
     display: flex;
   }
 
+  label {
+    color: #000000;
+  }
 
    /*VEICULOS*/

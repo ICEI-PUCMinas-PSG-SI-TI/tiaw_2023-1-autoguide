@@ -2,6 +2,7 @@
 body {
     animation-name: fade-in;
     animation-duration: 1s;
+    background-color: #2e2e2e;
   }
   
   @keyframes fade-in {
@@ -166,7 +167,7 @@ nav .nav-items li a {
 }
 
 nav .nav-items li a:hover {
-  color: #ff3d00;
+  color: #E65836;
 }
 
 nav form {
@@ -176,7 +177,7 @@ nav form {
   background: #ffffff;
   min-width: 18% !important;
   border-radius: 20px;
-  border: 1px solid rgb(255, 60, 0);
+  border: 1px solid #E65836;
 }
 
 nav form .search-data {
@@ -194,14 +195,14 @@ nav form button {
   padding: 0 15px;
   color: #fff;
   font-size: 20px;
-  background: #ff3d00;
+  background: #E65836;
   border: none;
   border-radius: 20px;
   cursor: pointer;
 }
 
 nav form button:hover {
-  background: #ff3c00af;
+  background: #3b3b3b;
 }
 
 nav .menu-icon,
@@ -211,7 +212,7 @@ nav .search-icon {
   text-align: center;
   margin: 0 50px;
   font-size: 18px;
-  color: #ff3c00af;
+  color: #E65836;
   cursor: pointer;
   display: none;
 }
@@ -391,6 +392,9 @@ nav .logo.space {
   
   li{ text-align: center; 
      list-style-type: none;
+     color: #ffffff;
    }
 
- 
+ p {
+  color: #ffffff;
+ }

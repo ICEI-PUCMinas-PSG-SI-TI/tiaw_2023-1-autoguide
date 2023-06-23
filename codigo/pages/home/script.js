@@ -37,7 +37,9 @@ function calcularProximaRevisao() {
   const dozeMesesEmMS = 12 * 30 * 24 * 60 * 60 * 1000;
 
   // Calcular os meses restantes para a próxima revisão
-  const mesesDiff = (currentDate.getFullYear() - lastRevisionDate.getFullYear()) * 12 + (currentDate.getMonth() - lastRevisionDate.getMonth());
+  const mesesDiff =
+    (currentDate.getFullYear() - lastRevisionDate.getFullYear()) * 12 +
+    (currentDate.getMonth() - lastRevisionDate.getMonth());
   const mesesRestantes = 12 - mesesDiff;
 
   let proximaRevisao;
@@ -71,7 +73,6 @@ function calcularProximaRevisao() {
   // Exibir a data da próxima revisão na tela
   document.getElementById("proxima-revisao").textContent = proximaRevisao;
 }
-
 
 // Igor Lucas Assunção Ribas
 document

@@ -8,7 +8,7 @@ window.onload = () => {
       for (let x = 0; x < getAccounts[i].veiculos.length; x++) {
         article.innerHTML += `
         <form>
-          <h3>Veículo ${i + 1}</h3>
+          <h3>Veículo ${x + 1}</h3>
           <label for="placa1">Placa:</label>
           <input type="text" id="placa1" name="placa1" value="${
             getAccounts[i].veiculos[x].placa

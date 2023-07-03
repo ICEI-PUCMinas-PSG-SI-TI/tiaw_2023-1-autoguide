@@ -34,9 +34,11 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+  <!--  Link para SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
 
-  <body onload="loadProfile()">
+  <body>
      <!-- CABECALHO -->
   <nav>
     <div class="menu-icon">
@@ -162,7 +164,7 @@
                 ><input
                   type="text"
                   class="form-control"
-                  id="addres2"
+                  id="address2"
                   placeholder="Endereço 2"
                   value=""
                 />
@@ -197,12 +199,12 @@
                   class="form-control"
                   id="state"
                   value=""
-                  placeholder="SP"
+                  placeholder=" SP "
                 />
               </div>
             </div>
             <div class="mt-5 text-center">
-              <button class="btn btn-primary profile-button" type="button">
+              <button id="btn-salvar" class="btn btn-primary profile-button" type="button">
                 Salvar
               </button>
             </div>

@@ -12,7 +12,7 @@ $("document").ready(() => {
     alert("Não há usuário logado"); //Imprime uma mensagem de erro
     setTimeout(function () {
       window.location.href = "/codigo/pages/login/login.html";
-    }, 3000);
+    }, 500);
   } //Redireciona para a página de login
 });
 
@@ -73,7 +73,7 @@ function calcularProximaRevisao() {
   // Exibir a data da próxima revisão na tela
   document.getElementById("proxima-revisao").textContent = proximaRevisao;
 }
-
+/*
 // Igor Lucas Assunção Ribas
 document
   .getElementById("BtnCadastroVeiculo")
@@ -157,3 +157,4 @@ function verificaveiculo(accounts, Veiculos) {
   }
   return [veiculo_jaexistente, index];
 }
+*/

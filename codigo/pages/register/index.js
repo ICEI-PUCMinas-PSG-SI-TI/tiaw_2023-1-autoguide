@@ -62,7 +62,12 @@ registerForm.addEventListener("submit", (e) => {
     lastName: lastName.value,
     email: email.value,
     password: password.value,
-    veiculos: []
+    phone: "",
+    address1: "",
+    address2: "",
+    pais: "",
+    estado: "",
+    veiculos: [],
   };
 
   if (checkUserAlreadyExists()) {

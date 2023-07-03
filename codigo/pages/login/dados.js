@@ -1,4 +1,4 @@
-let getAccounts = JSON.parse(localStorage.getItem("accounts"))
+let getAccounts = JSON.parse(localStorage.getItem("accounts"));
 let dados = [
   {
     name: "João",
@@ -6,14 +6,18 @@ let dados = [
     email: "joao@gmail.com",
     password: "12345",
     phone: "31999999999",
-    address1: "",
-    address2: "",
+    address1: "Rua dos bobos",
+    address2: "Nº 0",
+    pais: "BR",
+    estado: "MG",
     veiculos: [
       {
-        plate: "BRA2E19",
-        brand: "Renault",
-        model: "Duster 2015",
-        year: "2015",
+        placa: "BRA2E19",
+        marca: "Renault",
+        modelo: "Duster 2015",
+        KmLR: "10",
+        KmAtual: "100",
+        DataCadastro: [20, 1, 2023],
       },
     ],
   },
@@ -25,12 +29,16 @@ let dados = [
     phone: "",
     address1: "",
     address2: "",
+    pais: "",
+    estado: "",
     veiculos: [
       {
-        plate: "QRM7E33",
-        brand: "Fiat",
-        model: "Palio",
-        year: "2013",
+        placa: "Fiat",
+        marca: "Palio",
+        modelo: "Duster 2015",
+        KmLR: "1000",
+        KmAtual: "10000",
+        DataCadastro: [20, 12, 2012],
       },
     ],
   },
@@ -42,21 +50,25 @@ let dados = [
     phone: "",
     address1: "",
     address2: "",
+    pais: "",
+    estado: "",
     veiculos: [
       {
-        plate: "QOZ-1774",
-        brand: "Ford",
-        model: "Mustang Mach 1",
-        year: "1969",
+        placa: "QOZ-1774",
+        marca: "Ford",
+        modelo: "Mustang Mach 1",
+        KmLR: "10",
+        KmAtual: "100",
+        DataCadastro: [10, 6, 2018],
       },
     ],
   },
-]
+];
 
 function setFakeData() {
   if (!getAccounts) {
-    localStorage.setItem("accounts", JSON.stringify(dados))
+    localStorage.setItem("accounts", JSON.stringify(dados));
   }
 }
 
-export { setFakeData }
+export { setFakeData };

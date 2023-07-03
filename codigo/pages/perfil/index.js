@@ -70,6 +70,7 @@ function setDados() {
   for (let i = 0; i < getAccounts.length; i++) {
     //Percorre o vetor de contas e procura a conta do usuário logado
     if (getAccounts[i].email == userInfo.email) {
+      //Fazer os IFs e elses para cada campo
       getAccounts[i].phone = inputPhone.value;
       getAccounts[i].address1 = inputAddress1.value;
       getAccounts[i].address2 = inputAddress2.value;
@@ -86,5 +87,7 @@ function setDados() {
     userInfo.lastName = inputLastName.value;
     localStorage.setItem("userLoggedIn", JSON.stringify(userInfo));
   }
-  location.reload();
+  setTimeout(() => {
+    window.location.reload();
+  }, 1500);
 }

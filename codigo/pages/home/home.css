@@ -319,6 +319,19 @@ nav .logo.space {
   margin: 10px 0;
 }
 
+.fa-user,
+.fa-sign-out-alt {
+  font-size: 34px;
+  padding: 20px;
+  color:#E65836;
+}
+
+.fa-user:hover,
+.fa-sign-out-alt:hover {
+  color:#f53100;
+}
+
+
 /*FIM CABECALHO*/
   
   
@@ -426,7 +439,7 @@ nav .logo.space {
       }
       
       .card2-text a:hover {
-        color: rgb(134, 134, 134);
+        color: rgb(194, 194, 194);
         text-decoration: underline;
       }
 
@@ -452,7 +465,7 @@ nav .logo.space {
     }
 
     .card {
-        border-radius: 70px;
+        border-radius: 15px;
         box-shadow: 0 8px 12px rgba(0, 0, 0, 0.493);
         margin: 40px;
         background-color: #E65836;
@@ -461,8 +474,8 @@ nav .logo.space {
       }
       
       .card-img-top {
-        border-top-left-radius: 70px;
-        border-top-right-radius: 70px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
       }
       
       .card-title {

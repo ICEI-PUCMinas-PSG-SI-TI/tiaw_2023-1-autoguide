@@ -380,6 +380,19 @@ nav .logo.space {
   margin: 10px 0;
 }
 
+.fa-user,
+.fa-sign-out-alt {
+  font-size: 34px;
+  padding: 20px;
+  color:#E65836;
+}
+
+.fa-user:hover,
+.fa-sign-out-alt:hover {
+  color:#f53100;
+}
+
+
 /*FIM CABECALHO*/
 
   main{

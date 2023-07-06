@@ -2,6 +2,11 @@ let UsuarioLogado; //Variável global para armazenar o usuário logado: linha 9
 let UserLogado = false; //variável global para verificar se o usuário está logado: linha 6
 var posicao; //posição do usuário logado no vetor de contas(Gambiarra)
 
+let btn_sair = document.getElementById("btn_sair");
+btn_sair.addEventListener("click", () => {
+  localStorage.removeItem("userLoggedIn");
+  window.location.href = "/codigo/pages/login/login.html";
+});
 //Verifica se o usuário está logado
 $("document").ready(() => {
   let userlogado = JSON.parse(localStorage.getItem("userLoggedIn"));

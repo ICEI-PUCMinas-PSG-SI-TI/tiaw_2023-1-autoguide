@@ -59,7 +59,6 @@ btn_salvar.addEventListener("click", () => {
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
-      Swal.fire("As mudanças foram salvas!", "", "success");
       setDados();
     } else if (result.isDenied) {
       Swal.fire("As mudanças não foram salvas", "", "info");
@@ -69,18 +68,30 @@ btn_salvar.addEventListener("click", () => {
 function setDados() {
   for (let i = 0; i < getAccounts.length; i++) {
     //Percorre o vetor de contas e procura a conta do usuário logado
-    if (getAccounts[i].email == userInfo.email) {
-      //Fazer os IFs e elses para cada campo
-      getAccounts[i].phone = inputPhone.value;
-      getAccounts[i].address1 = inputAddress1.value;
-      getAccounts[i].address2 = inputAddress2.value;
-      getAccounts[i].pais = inputPais.value;
-      getAccounts[i].estado = inputEstado.value;
-      getAccounts[i].email = inputEmail.value;
-      getAccounts[i].name = inputFirstName.value;
-      getAccounts[i].lastName = inputLastName.value;
 
-      localStorage.setItem("accounts", JSON.stringify(getAccounts));
+    if (
+      inputEmail.value == "" ||
+      inputFirstName.value == "" ||
+      inputLastName.value == ""
+    ) {
+      Swal.fire("As mudanças não foram salvas", "", "info");
+    } else if (!verificaArroba()) {
+      Swal.fire("As mudanças não foram salvas", "", "info");
+    } else {
+      Swal.fire("As mudanças foram salvas!", "", "success");
+      if (getAccounts[i].email == userInfo.email) {
+        //Fazer os IFs e elses para cada campo
+        getAccounts[i].phone = inputPhone.value;
+        getAccounts[i].address1 = inputAddress1.value;
+        getAccounts[i].address2 = inputAddress2.value;
+        getAccounts[i].pais = inputPais.value;
+        getAccounts[i].estado = inputEstado.value;
+        getAccounts[i].email = inputEmail.value;
+        getAccounts[i].name = inputFirstName.value;
+        getAccounts[i].lastName = inputLastName.value;
+
+        localStorage.setItem("accounts", JSON.stringify(getAccounts));
+      }
     }
     userInfo.email = inputEmail.value;
     userInfo.name = inputFirstName.value;
@@ -90,4 +101,20 @@ function setDados() {
   setTimeout(() => {
     window.location.reload();
   }, 1500);
+}
+
+function verificaArroba() {
+  let bool = false;
+  let cont = 0;
+  for (let i = 0; i < inputEmail.value.length; i++) {
+    if (inputEmail.value[i] == "@") {
+      cont++;
+    }
+  }
+  if (cont == 1) {
+    bool = true;
+  } else {
+    bool = false;
+  }
+  return bool;
 }

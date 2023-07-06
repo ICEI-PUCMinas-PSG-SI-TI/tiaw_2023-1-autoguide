@@ -89,14 +89,14 @@ function setDados() {
         getAccounts[i].email = inputEmail.value;
         getAccounts[i].name = inputFirstName.value;
         getAccounts[i].lastName = inputLastName.value;
+        userInfo.email = inputEmail.value;
+        userInfo.name = inputFirstName.value;
+        userInfo.lastName = inputLastName.value;
 
+        localStorage.setItem("userLoggedIn", JSON.stringify(userInfo));
         localStorage.setItem("accounts", JSON.stringify(getAccounts));
       }
     }
-    userInfo.email = inputEmail.value;
-    userInfo.name = inputFirstName.value;
-    userInfo.lastName = inputLastName.value;
-    localStorage.setItem("userLoggedIn", JSON.stringify(userInfo));
   }
   setTimeout(() => {
     window.location.reload();
